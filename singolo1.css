@@ -1,6 +1,16 @@
 @font-face {
-  font-family: Lato-bold;
+  font-family: Lato-Bold;
   src: url("assets/fonts/lato/Lato-Bold.ttf");
+}
+
+@font-face{
+  font-family: Lato-Black;
+  src: url("assets/fonts/lato/Lato-Black.ttf");
+}
+
+@font-face{
+  font-family: Lato-Light;
+  src: url("assets/fonts/lato/Lato-Light.ttf");
 }
 
 * {
@@ -37,7 +47,7 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  font-family: Lato-bold;
+  font-family: Lato-Bold;
   text-transform: uppercase;
 }
 
@@ -87,12 +97,38 @@ header {
   z-index: 100;
 }
 
+/* Services style */
 .services {
   height: 500px;
-  
+
   position: relative;
 
   background-color: #f2f2f2;
   box-shadow: 0 6px 0px 0px #ffffff;
   z-index: 50;
+}
+
+.services-wrapper{
+  color: #767e9e;
+}
+
+.services-description{
+  padding-top: 5.5%;
+}
+
+.services-description h1{
+  font-size: 1.9rem;
+  font-family: Lato-Black;
+  line-height: 2;
+  color: #666D89;
+  letter-spacing: -0.01em;
+}
+
+.services-description p{
+  padding-top: 0.5em;
+
+  text-align: justify;
+  font-size: 1.09rem;
+  line-height: 1.69em;
+  font-family: Lato-Light;
 }
