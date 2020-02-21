@@ -13,6 +13,11 @@
   src: url("assets/fonts/lato/Lato-Light.ttf");
 }
 
+@font-face{
+  font-family: Lato-Regular;
+  src: url("assets/fonts/lato/Lato-Regular.ttf");
+}
+
 * {
   margin: unset;
   padding: unset;
@@ -87,6 +92,10 @@ header {
   color: #494e62;
 }
 
+.is-active-nav{
+  color: #f06c64 !important;
+}
+
 .slider {
   height: 600px;
   
@@ -112,6 +121,7 @@ header {
   color: #767e9e;
 }
 
+/* Services description block styles */
 .services-description{
   padding-top: 5.5%;
 }
@@ -130,5 +140,43 @@ header {
   text-align: justify;
   font-size: 1.09rem;
   line-height: 1.69em;
+  font-weight: 500;
   font-family: Lato-Light;
+}
+
+/* Services features block style*/
+.services-features{
+  padding-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 2em;
+}
+
+.feature-block{
+  display: flex;
+}
+
+.feature-description{
+  padding-left: 1.1em;
+  line-height: 1.25em;
+
+}
+
+.image-wrapper{
+  text-align: center;
+}
+
+.feature-description h3{
+  font-family: Lato-Black;
+  word-spacing: -0.1em;
+
+}
+
+.feature-description p{
+  padding-top: 0.9em;
+  font-family: Lato-Regular;
+  font-weight: 500;
+  font-size: 0.74em;
+  text-align: justify;
 }
