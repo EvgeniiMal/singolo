@@ -36,13 +36,14 @@
 
   width: 92.1%;
   height: 100%;
-  
+
 }
 
 .portfolio {
   position: relative;
   height: 864px;
   display: flex;
+  z-index: 100;
 
   background-color: #2D303A;
   color: #666d89;
@@ -119,14 +120,20 @@
   grid-row-gap: 1.2em;
 }
 
-.portfolio-images img{
+.portfolio-images img {
   display: block;
 }
+
+/* About section */
 .about {
   height: 728px;
 
+  position: relative;
+  z-index: 50;
+
   background-color: #f2f2f2;
   color: #666d89;
+  box-shadow: 0 6px 0px 0px #ffffff;
 }
 
 .about-description {
@@ -136,7 +143,7 @@
   flex-direction: column;
 }
 
-.about-description p{
+.about-description p {
   font-family: Lato-Light;
   font-size: 1.1em;
   word-spacing: -0.02em;
@@ -152,16 +159,17 @@
   grid-column-gap: 1.2em;
 }
 
-.about-column h3 {
+.about-column .name {
   padding-top: 0.7em;
 
   font-family: Lato-Black;
   font-weight: 500;
   font-size: 1.1em;
   word-spacing: 0.2em;
+  white-space: nowrap;
 }
 
-.about-column p {
+.about-column .info {
   padding-top: 0.8em;
 
   font-family: Lato-Regular;
@@ -176,9 +184,8 @@
 
 .about-icons {
   padding-top: 1.5em;
-  
+
   display: grid;
   grid-template-columns: repeat(4, 0.1fr);
   grid-column-gap: 0.3em;
 }
-
