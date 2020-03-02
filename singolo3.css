@@ -1,0 +1,71 @@
+@font-face {
+    font-family: Lato-Bold;
+    src: url("assets/fonts/lato/Lato-Bold.ttf");
+}
+
+@font-face {
+    font-family: Lato-Black;
+    src: url("assets/fonts/lato/Lato-Black.ttf");
+}
+
+@font-face {
+    font-family: Lato-Light;
+    src: url("assets/fonts/lato/Lato-Light.ttf");
+}
+
+@font-face {
+    font-family: Lato-Regular;
+    src: url("assets/fonts/lato/Lato-Regular.ttf");
+}
+
+
+
+* {
+    margin: unset;
+    padding: unset;
+    box-sizing: border-box;
+}
+
+.test-wrapper {
+    width: 1020px;
+    margin: auto;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+
+    width: 92.1%;
+    height: 100%;
+}
+
+.quote{
+    position: relative;
+    z-index: 30;
+    height: 648px;
+    color: #f0d8d9;
+    background-color: #f06c64;
+    box-shadow: 0 6px 0px 0px #ea676b;
+}
+
+.quote-description {
+    height: 27%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.section-title {
+    padding-bottom: 0.6em;
+    font-family: "Lato-Black";
+    font-weight: 900;
+    font-size: 1.9em;
+}
+
+.quote-description p {
+    padding-right: 0.13em;
+    font-family: Lato-Light;
+    font-size: 1.1em;
+    line-height: 1.8em;
+    text-align: justify;
+    letter-spacing: -0.003em;
+}
