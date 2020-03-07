@@ -35,6 +35,10 @@
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*  Header styles */
 header {
   position: sticky;
@@ -434,6 +438,7 @@ header {
 .contact-form input[type=submit] {
   color: white;
   text-transform: uppercase;
+  margin-bottom: 1em;
 }
 
 ::placeholder {
