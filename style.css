@@ -124,6 +124,7 @@ header {
 
 .slider-nav:hover {
   background-color: rgba(255, 254, 254, 0.13);
+  cursor: pointer;
 }
 
 .slider-nav:nth-child(3) {
@@ -439,6 +440,9 @@ header {
   color: white;
   text-transform: uppercase;
   margin-bottom: 1em;
+  cursor: pointer;
+
+  font-family: Lato-Regular;
 }
 
 ::placeholder {
