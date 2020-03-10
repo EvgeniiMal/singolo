@@ -336,17 +336,15 @@ header {
   grid-column-gap: 1.2em;
 }
 
-.about-column {
-  white-space: nowrap;
-  overflow: hidden;
-}
-
 .about-column .name {
   padding-top: 0.7em;
+  width: 17em;
 
   font-family: Lato-Black;
   font-weight: 500;
   font-size: 1.1em;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .about-column .info {
@@ -421,7 +419,7 @@ header {
 
 .contact-form {
   width: 66%;
-  height: 47.5vh;
+  height: 27em;
 
   display: flex;
   justify-content: space-between;
