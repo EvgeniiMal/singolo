@@ -31,12 +31,12 @@
     </header>
     <main>
       <div class="slider">
-        <div class="slider-nav">
+        <div class="slider-nav" id="prev-arrow">
           <div class="arrow-wrapper">
             <img src="assets/images/left-arrow.png" alt="left arrow">
           </div>
         </div>
-        <div class="slider-content">
+        <div class="slider-content showed-slide">
           <div class="phone-wrapper">
             <img src="assets/images/iPhone_Vertical.png" alt="iPhone vertical">
           </div>
@@ -44,7 +44,17 @@
             <img src="assets/images/iPhone_Horizontal.png" alt="iPhone horizontal">
           </div>
         </div>
-        <div class="slider-nav">
+
+          <div class="slider-content s2">
+            <div class="phone-wrapper">
+              <img src="assets/images/iPhone_Vertical.png" alt="iPhone vertical">
+            </div>
+            <div class="phone-wrapper">
+              <img src="assets/images/iPhone_Horizontal.png" alt="iPhone horizontal">
+            </div>
+          </div>
+
+        <div class="slider-nav" id="next-arrow">
           <div class="arrow-wrapper">
             <img src="assets/images/right-arrow.png" alt="right arrow">
           </div>
@@ -146,27 +156,27 @@
             <h2 class="section-title">Portfolio</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
             <div class="portfolio-buttons">
-              <a class="current-choice" href="#">All</a>
-              <a href="#">Web Design</a>
-              <a href="#">Graphic Design</a>
-              <a href="#">Artwork</a>
+              <a class="sort-button current-choice" id="all" href="#">All</a>
+              <a href="#" id="web-design" class="sort-button">Web Design</a>
+              <a href="#" id="graphic-design" class="sort-button">Graphic Design</a>
+              <a href="#" id="artwork" class="sort-button">Artwork</a>
             </div>
           </div>
           <div class="portfolio-images">
-            <img src="assets/images/portfolio/row1/1.jpg" alt="">
-            <img src="assets/images/portfolio/row1/2.jpg" alt="">
-            <img src="assets/images/portfolio/row1/3.jpg" alt="">
-            <img src="assets/images/portfolio/row1/4.jpg" alt="">
-            <img src="assets/images/portfolio/row2/1.jpg" alt="">
-            <img src="assets/images/portfolio/row2/2.jpg" alt="">
-            <img src="assets/images/portfolio/row2/3.jpg" alt="">
-            <img src="assets/images/portfolio/row2/4.jpg" alt="">
-            <img src="assets/images/portfolio/row3/1.jpg" alt="">
-            <img src="assets/images/portfolio/row3/2.jpg" alt="">
-            <img src="assets/images/portfolio/row3/3.jpg" alt="">
-            <img src="assets/images/portfolio/row3/4.jpg" alt="">
-            <img src="assets/images/portfolio/row3/4.jpg" alt="">
-            <img src="assets/images/portfolio/row3/4.jpg" alt="">
+            <img src="assets/images/portfolio/row1/1.jpg" class="portfolio-pic graphic-design" alt="">
+            <img src="assets/images/portfolio/row1/2.jpg" class="portfolio-pic graphic-design" alt="">
+            <img src="assets/images/portfolio/row1/3.jpg" class="portfolio-pic artwork" alt="">
+            <img src="assets/images/portfolio/row1/4.jpg" class="portfolio-pic graphic-design" alt="">
+            <img src="assets/images/portfolio/row2/1.jpg" class="portfolio-pic web-design" alt="">
+            <img src="assets/images/portfolio/row2/2.jpg" class="portfolio-pic artwork" alt="">
+            <img src="assets/images/portfolio/row2/3.jpg" class="portfolio-pic artwork" alt="">
+            <img src="assets/images/portfolio/row2/4.jpg" class="portfolio-pic web-design" alt="">
+            <img src="assets/images/portfolio/row3/1.jpg" class="portfolio-pic graphic-design" alt="">
+            <img src="assets/images/portfolio/row3/2.jpg" class="portfolio-pic graphic-design" alt="">
+            <img src="assets/images/portfolio/row3/3.jpg" class="portfolio-pic web-design" alt="">
+            <img src="assets/images/portfolio/row3/4.jpg" class="portfolio-pic graphic-design" alt="">
+            <img src="assets/images/portfolio/row3/4.jpg" class="portfolio-pic graphic-design" alt="">
+            <img src="assets/images/portfolio/row3/4.jpg" class="portfolio-pic artwork" alt="">
           </div>
         </div>
       </section>
@@ -294,6 +304,7 @@
           </div>
         </div>
       </section>
+       </main>
       <footer>
         <div class="footer-wrapper content-wrapper">
           <p>© Copyright 2013</p>
@@ -313,8 +324,7 @@
           </div>
         </div>
       </footer>
-    </main>
   </div>
+  <script src="script.js"></script>
 </body>
-
 </html>
