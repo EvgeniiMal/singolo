@@ -1,3 +1,4 @@
+// Slider
 function Slider() {
     this.slides = document.querySelectorAll(".slider-content");
     let currentSlide = 0;
@@ -24,6 +25,7 @@ function Slider() {
     document.getElementById("next-arrow").addEventListener("click", this.next);
 }
 
+// Sort images in portfolio
 function Sorter() {
     const buttons = document.querySelectorAll(".sort-button");
 
@@ -59,8 +61,27 @@ function Sorter() {
     }
 }
 
+// Phones toggle buttons
+function Toggler() {
+    const areas = document.querySelectorAll('.phone-area');
 
+    areas.forEach(area => {
+        area.addEventListener("click", () => {
+            const screenClass = area.id;
+            console.log(screenClass);
+            const screen = document.querySelector(`.${screenClass}`);
+            if (screen.classList.contains("black-screen")) {
+                screen.classList.remove("black-screen");
+            } else {
+                screen.classList.add("black-screen");
+            }
+        });
+    });
+}
+
+// Init block
 window.onload = function () {
     const slider = new Slider();
     const sorter = new Sorter();
+    const toggler = new Toggler();
 }

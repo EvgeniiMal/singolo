@@ -108,9 +108,6 @@ header {
   position: relative;
   display: flex;
   justify-content: space-between;
-
- 
-  
 }
 
 .slider-nav {
@@ -170,6 +167,36 @@ header {
   display: flex;
 }
 
+.phone-wrapper {
+  position: relative;
+}
+
+.iPhone-screen-one {
+  position: absolute;
+  
+  bottom: 22.4%;
+  left: 16.4%;
+  height: 59.5%;
+  width: 60%;
+}
+
+.iPhone-screen-two {
+  position: absolute;
+
+  width: 59.8%;
+  height: 59.5%;
+  bottom: 24.5%;
+  left: 17.3%;
+}
+
+.black-screen {
+  background-color: black;
+}
+
+map {
+  user-select: none;
+  cursor: pointer;
+}
 
 /* Services style */
 .services {
