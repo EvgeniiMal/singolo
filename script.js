@@ -26,10 +26,12 @@ function Slider() {
 }
 
 // Sort images in portfolio
-function Sorter() {
+function Gallery() {
     const buttons = document.querySelectorAll(".sort-button");
+    const images = document.querySelectorAll(".portfolio-pic");
 
     let currentButton = buttons[0];
+    let currentPic;
 
     buttons.forEach(button => {
         button.addEventListener("click", (e) => {
@@ -43,13 +45,23 @@ function Sorter() {
         });
     });
 
-    this.sortGallery = () => {
-        const images = document.querySelectorAll(".portfolio-pic");
+    images.forEach(pic => {
+        pic.addEventListener("click", () => {
+            this.addBorder(pic);
+        })
+    });
 
+    this.sortGallery = () => {
         images.forEach(pic => {
             const random = Math.floor(Math.random() * (1 - 12) + 1);
             pic.style.order= `${random}`;
         });
+    }
+
+    this.addBorder = (pic) => {
+        if (currentPic) currentPic.style.border = "none";
+        currentPic = pic;
+        currentPic.style.border = "5px #F06C64 solid";
     }
 }
 
@@ -66,9 +78,13 @@ function Toggler() {
     });
 }
 
+function Popup() {
+    
+}
+
 // Init block
 window.onload = function () {
     const slider = new Slider();
-    const sorter = new Sorter();
+    const gallery = new Gallery();
     const toggler = new Toggler();
 }
