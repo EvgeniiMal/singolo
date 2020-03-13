@@ -120,6 +120,7 @@ header {
   align-items: center;
   justify-content: flex-end;
   z-index: 100;
+  user-select: none;
 }
 
 #next-arrow {
@@ -151,8 +152,6 @@ header {
   width: 100%;
 
   display: none;
-  justify-content: center;
-  align-items: center;
 
   background-color: #647ef0;
   box-shadow: 0 6px 0px 0px #647ef0;
@@ -187,6 +186,16 @@ header {
   height: 59.5%;
   bottom: 24.5%;
   left: 17.3%;
+}
+
+.iPhone-screen-three {
+  position: absolute;
+  left: 39.8%;
+  bottom: 25.6%;
+
+  width: 18.3%;
+  height: 52.4%;
+  z-index: 100;
 }
 
 .black-screen {

@@ -39,25 +39,17 @@ function Sorter() {
             button.classList.add("current-choice");
             currentButton = button;
 
-            const theme = button.id;
-
-            this.sortGallery(theme);
+            this.sortGallery();
         });
     });
 
-    this.sortGallery = (theme) => {
-        document.querySelectorAll(".portfolio-pic").forEach(pic => {
-            pic.style.display = "none";
+    this.sortGallery = () => {
+        const images = document.querySelectorAll(".portfolio-pic");
+
+        images.forEach(pic => {
+            const random = Math.floor(Math.random() * (1 - 12) + 1);
+            pic.style.order= `${random}`;
         });
-        if (theme === "all") {
-            document.querySelectorAll(".portfolio-pic").forEach(pic => {
-                pic.style.display = "block";
-            });
-        } else {
-            document.querySelectorAll(`.${theme}`).forEach(pic => {
-                pic.style.display = "block";
-            })
-        }
     }
 }
 
@@ -68,13 +60,8 @@ function Toggler() {
     areas.forEach(area => {
         area.addEventListener("click", () => {
             const screenClass = area.id;
-            console.log(screenClass);
             const screen = document.querySelector(`.${screenClass}`);
-            if (screen.classList.contains("black-screen")) {
-                screen.classList.remove("black-screen");
-            } else {
-                screen.classList.add("black-screen");
-            }
+            screen.classList.toggle("black-screen");
         });
     });
 }
