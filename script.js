@@ -1,90 +1,132 @@
+const $ = document;
+
+
 // Slider
 function Slider() {
-    this.slides = document.querySelectorAll(".slider-content");
+    const slides = $.querySelectorAll(".slider-content");
     let currentSlide = 0;
 
-    this.prev = () => {
-        this.slides[currentSlide].classList.remove("showed-slide");
+    $.getElementById("prev-arrow").onclick = () => {
+        slides[currentSlide].classList.remove("showed-slide");
         currentSlide--;
         if (currentSlide < 0) {
-            currentSlide = this.slides.length - 1;
+            currentSlide = slides.length - 1;
         }
-        this.slides[currentSlide].classList.add("showed-slide");
+        slides[currentSlide].classList.add("showed-slide");
     };
 
-    this.next = () => {
-        this.slides[currentSlide].classList.remove("showed-slide");
+    $.getElementById("next-arrow").onclick = () => {
+        slides[currentSlide].classList.remove("showed-slide");
         currentSlide++;
-        if (currentSlide >= this.slides.length) {
+        if (currentSlide >= slides.length) {
             currentSlide = 0;
         }
-        this.slides[currentSlide].classList.add("showed-slide");
+        slides[currentSlide].classList.add("showed-slide");
     }
-
-    document.getElementById("prev-arrow").addEventListener("click", this.prev);
-    document.getElementById("next-arrow").addEventListener("click", this.next);
 }
 
-// Sort images in portfolio
-function Gallery() {
-    const buttons = document.querySelectorAll(".sort-button");
-    const images = document.querySelectorAll(".portfolio-pic");
+
+// Portfolio gallery
+function Portfolio() {
+    const buttons = $.querySelectorAll(".sort-button");
+    const images = $.querySelectorAll(".portfolio-pic");
 
     let currentButton = buttons[0];
     let currentPic;
 
     buttons.forEach(button => {
-        button.addEventListener("click", (e) => {
+        button.onclick = (e) => {
             e.preventDefault();
 
             currentButton.classList.remove("current-choice");
             button.classList.add("current-choice");
             currentButton = button;
+            if (currentPic) currentPic.classList.remove("pic-with-border");
 
-            this.sortGallery();
-        });
+            sortGallery();
+        }
     });
 
     images.forEach(pic => {
-        pic.addEventListener("click", () => {
-            this.addBorder(pic);
-        })
+        pic.onclick = () => {
+            addBorder(pic);
+        }
     });
 
-    this.sortGallery = () => {
+    const sortGallery = () => {
         images.forEach(pic => {
             const random = Math.floor(Math.random() * (1 - 12) + 1);
             pic.style.order= `${random}`;
         });
     }
 
-    this.addBorder = (pic) => {
-        if (currentPic) currentPic.style.border = "none";
+    const addBorder = (pic) => {
+        if (currentPic) currentPic.classList.remove("pic-with-border"); 
+        if (currentPic == pic) {
+            currentPic = undefined;
+            return;
+        }
         currentPic = pic;
-        currentPic.style.border = "5px #F06C64 solid";
+        currentPic.classList.toggle("pic-with-border");
     }
 }
 
 // Phones toggle buttons
 function Toggler() {
-    const areas = document.querySelectorAll('.phone-area');
+    const areas = $.querySelectorAll('.phone-area');
 
     areas.forEach(area => {
-        area.addEventListener("click", () => {
+        area.onclick = (e) => {
             const screenClass = area.id;
-            const screen = document.querySelector(`.${screenClass}`);
+            const screen = $.querySelector(`.${screenClass}`);
             screen.classList.toggle("black-screen");
-        });
+        };
     });
 }
 
-function Popup() {
+function Modal() {
+    const form = $.querySelector("form");
+    const modal = $.querySelector(".modal");
+    let subject;
+    let describe;
+
+    $.querySelector("#modal-button").onclick = (e) => {
+        modal.style.display = "none";
+        form.reset();
+    };
+
+    form.onsubmit = (e) => {
+        e.preventDefault();
+        subject = form.subject.value !== "" ? form.subject.value : "Без темы";
+        describe = form.describe.value !== ""? form.describe.value : "Без описания";
+        
+        modal.style.display = "block";
+        $.querySelector(".form-data > .data").innerHTML = `
+                <div>
+                <p>Тема:</p>
+                <p>${subject}</p>
+                </div>
+                <div>
+                <p>Описание:</p>
+                <p>${describe}</p>
+                </div>
+                </div>
+        `
+    }
+}
+
+function Header() {
     
 }
+
+
 
 // Init block
 window.onload = function () {
     const slider = new Slider();
-    const gallery = new Gallery();
+    const gallery = new Portfolio();
     const toggler = new Toggler();
+    const popup = new Modal();
+
 }
+

@@ -42,8 +42,9 @@ a {
 /*  Header styles */
 header {
   position: sticky;
+  top: 0;
 
-  height: 89px;
+  height: 5.6em;
 
   background-color: #2d303a;
   color: white;
@@ -367,6 +368,9 @@ map {
   display: none !important;
 }
 
+.pic-with-border {
+  border: 5px #F06C64 solid;
+}
 
 /* About section */
 .about {
@@ -613,4 +617,69 @@ footer {
 
 .footer-icons {
   padding-top: 0.49em;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 150;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8)
+}
+
+.modal .form-data {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  width: 60%;
+  max-height: 90%;
+
+  border: #f06c64 2px solid;
+  background-color: #ea676b;
+  color: white;
+  font-family: Lato-Light;
+  border-radius: 0.6em;
+}
+
+.form-data h2{
+  margin: auto;
+}
+
+.form-data .data {
+  height: 90%;
+  width: 98%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.data div {
+  max-height: 15em;
+  margin-top: 1em;
+  background-color: #d6564f;
+  border-radius: 0.6em;
+  overflow-y: auto;
+  text-align: justify;
+}
+
+.data p{
+  padding: 0.5em 0.5em;
+}
+
+.form-data button{
+  margin: 0.5em auto;
+  width: 6em;
+  height: 3em;
+  color: white;
+  background-color: #d6564f;
+  border: #ea676b 1px solid;
+  border-radius: 0.6em;
+  cursor: pointer;
 }

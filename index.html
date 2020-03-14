@@ -278,10 +278,10 @@
           </div>
           <div class="contact-wrapper">
             <form class="contact-form">
-              <input type="text" placeholder="Name (Required)" required>
-              <input type="email" placeholder="Email (Required)" required>
-              <input type="text" placeholder="Subject">
-              <textarea name="" id="" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
+              <input type="text" name="name" placeholder="Name (Required)" required>
+              <input type="email" name="email" placeholder="Email (Required)" required>
+              <input type="text" name="subject" placeholder="Subject">
+              <textarea name="describe" id="" placeholder="Describe your project in detail..."></textarea>
               <input type="submit" value="submit">
             </form>
             <div class="contact-info">
@@ -314,6 +314,7 @@
           </div>
         </div>
       </section>
+      
     </main>
     <footer>
       <div class="footer-wrapper content-wrapper">
@@ -334,9 +335,15 @@
         </div>
       </div>
     </footer>
-    <div class="popup">
-      popup
-    </div>
+  </div>
+  <div class="modal">
+     <div class="form-data">
+       <h2>Письмо отправлено!</h2>
+        <div class="data">
+
+        </div>
+       <button id="modal-button">OK</button>
+     </div>
   </div>
   <script src="script.js"></script>
 </body>
