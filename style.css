@@ -24,13 +24,17 @@
   box-sizing: border-box;
 }
 
-.test-wrapper {
-  width: 1020px;
-  margin: auto;
+:root {
+  font-size: calc(lvw + 0.6em);
+}
+
+html {
+  scroll-behavior: smooth;
+  
 }
 
 .content-wrapper {
-  width: 92.1%;
+  width: 74.5%;
   height: 100%;
   margin: 0 auto;
 }
@@ -59,6 +63,12 @@ header {
 
   font-family: Lato-Bold;
   text-transform: uppercase;
+}
+
+.burger {
+  margin-left: 5vw;
+  transform: rotate(90deg);
+  display: none;
 }
 
 /* Logo  styles*/
@@ -104,7 +114,7 @@ header {
 
 /* Slider styles */
 .slider {
-  height: 600px;
+  height: 37.6em;
 
   position: relative;
   display: flex;
@@ -129,7 +139,7 @@ header {
 }
 
 .slider-nav:hover {
-  background-color: rgba(255, 254, 254, 0.13);
+  background-color: rgba(255, 255, 255, 0.082);
   cursor: pointer;
 }
 
@@ -138,29 +148,41 @@ header {
 }
 
 .slider-content {
-  width: 100%;
-
   display: none;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+}
+
+.slide-1 {
 
   background-color: #f06c64;
   box-shadow: 0 6px 0px 0px #ea676b;
   z-index: 90;
 }
 
-.s2 {
-  width: 100%;
+.slide-1 .phones {
+  margin: 0 auto;
 
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.phones img {
+  max-width: 100%;
+}
+
+.slide-2 {
   display: none;
 
-  background-color: #647ef0;
+  justify-content: center;
+  align-items: center;
+  background-color: #648BF0;
   box-shadow: 0 6px 0px 0px #647ef0;
   z-index: 90;
 }
 
-.slider-content img {
-  margin: 2.3em;
+.slide-2 img {
+  display: block;
 }
 
 .showed-slide {
@@ -177,13 +199,11 @@ header {
   bottom: 22.4%;
   left: 16.4%;
   height: 59.5%;
-  width: 60%;
 }
 
 .iPhone-screen-two {
   position: absolute;
 
-  width: 59.8%;
   height: 59.5%;
   bottom: 24.5%;
   left: 17.3%;
@@ -192,7 +212,7 @@ header {
 .iPhone-screen-three {
   position: absolute;
   left: 39.8%;
-  bottom: 25.6%;
+  bottom: 25.8%;
 
   width: 18.3%;
   height: 52.4%;
@@ -210,13 +230,14 @@ map {
 
 /* Services style */
 .services {
-  height: 500px;
+  min-height: 31.1em;
 
   position: relative;
 
   background-color: #f2f2f2;
   box-shadow: 0 6px 0px 0px #ffffff;
   z-index: 50;
+  scroll-margin-top: 3em;
 }
 
 .services-wrapper {
@@ -248,12 +269,12 @@ map {
 
 /* Services features block style*/
 .services-features {
-  padding-top: 5%;
+  padding-top: 4.7%;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 2em;
+  grid-column-gap: 1.1em;
+  grid-row-gap: 2.1em;
 }
 
 .feature-block {
@@ -287,16 +308,18 @@ map {
 
 .portfolio {
   position: relative;
-  height: 54.4em;
+  min-height: 54.4em;
   display: flex;
   z-index: 40;
 
   background-color: #2D303A;
   color: #666d89;
   box-shadow: 0 6px 0px 0px #323746;
+  scroll-margin-top: 3em;
 }
 
 .portfolio-description {
+  padding-top: 4em;
   height: 21.5%;
   display: flex;
   flex-direction: column;
@@ -360,8 +383,8 @@ map {
   max-height: 73%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 1.2em;
-  grid-row-gap: 1.2em;
+  grid-column-gap: 1.3em;
+  grid-row-gap: 1.15em;
 }
 
 .portfolio-images .portfolio-pic:nth-child(1n+13) {
@@ -370,11 +393,12 @@ map {
 
 .pic-with-border {
   border: 5px #F06C64 solid;
+  border-style: inset;
 }
 
 /* About section */
 .about {
-  height: 45.8em;
+  min-height: 45.8em;
 
   position: relative;
   z-index: 30;
@@ -382,6 +406,7 @@ map {
   background-color: #f2f2f2;
   color: #666d89;
   box-shadow: 0 6px 0px 0px #ffffff;
+  scroll-margin-top: 3em;
 }
 
 .about-description {
@@ -401,15 +426,21 @@ map {
 
 .about-columns-wrapper {
   padding-top: 3em;
+  width: 100%;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 1.2em;
 }
 
+.about-column img {
+  display: block;
+  width: 100%;
+}
+
 .about-column .name {
   padding-top: 0.7em;
-  width: 17em;
+  
 
   font-family: Lato-Black;
   font-weight: 500;
@@ -452,13 +483,15 @@ map {
 .quote {
   position: relative;
   z-index: 20;
-  height: 40.8em;
+  min-height: 40.8em;
   color: #f0d8d9;
   background-color: #f06c64;
   box-shadow: 0 6px 0px 0px #ea676b;
+  scroll-margin-top: 3em;
 }
 
 .quote-description {
+  padding-top: 3em;
   height: 28%;
   display: flex;
   flex-direction: column;
@@ -682,4 +715,139 @@ footer {
   border: #ea676b 1px solid;
   border-radius: 0.6em;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1020px) {
+  .content-wrapper {
+    width:  96%;
+    margin: auto;
+  }
+
+  .navbar a:hover {
+    color: white;
+  }
+
+  .phones {
+    width: 80%;
+  }
+
+  .services-features {
+    padding-top: 4.7%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.1em;
+    grid-row-gap: 2.1em;
+  }
+
+  .portfolio-images {
+    width: fit-content;
+    margin: auto;
+    padding-top: 0.5em;
+    max-height: 73%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 3vh;
+  }
+  .portfolio-images img {
+    width: 28vw;
+  }
+  .about-columns-wrapper {
+    padding-top: 3em;
+
+    disply: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1em;
+  }
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 767px){
+  .content-wrapper {
+    width: 96%;
+    margin: auto;
+  }
+
+  .header-wrapper .logo {
+    margin-left: 23%;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-family: Lato-Bold;
+    text-transform: uppercase;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .phones {
+    width: 80%;
+  }
+
+  .services-features {
+    padding-top: 4.7%;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 1.1em;
+    grid-row-gap: 2.1em;
+  }
+
+  .portfolio-images {
+    padding-top: 0.5em;
+    max-height: 73%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 3vh;
+  }
+
+  .portfolio-images img {
+    width: 45vw;
+  }
+
+  .about-columns-wrapper {
+    padding-top: 3em;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1em;
+  }
+
+  .about-columns-wrapper {
+    padding-top: 3em;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 1.2em;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    width: 96vw;
+    height: 27em;
+  }
+
+  .contact-info {
+    padding: 0 0;
+    width: 96vw;
+  }
+
+  .slide-2 img {
+    display: block;
+    width: 90vw;
+  }
+
+
 }

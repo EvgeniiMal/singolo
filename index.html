@@ -9,23 +9,26 @@
 </head>
 
 <body>
-  <div class="test-wrapper">
+  <div id="home" class="test-wrapper">
     <header>
       <div class="header-wrapper content-wrapper">
+        <div class="burger">
+          <img src="assets/images/svg/burger-i.svg" alt="">
+        </div>
         <div class="logo">
           <h1>singolo</h1>
           <span class="logo-decorate">*</span>
         </div>
         <nav class="navbar">
-          <a class="is-active-nav" href="#">home</a>
+          <a class="is-active-nav" href="#home">home</a>
           <p>.</p>
-          <a href="#">services</a>
+          <a href="#services">services</a>
           <p>.</p>
-          <a href="#">portfolio</a>
+          <a href="#portfolio">portfolio</a>
           <p>.</p>
-          <a href="#">about</a>
+          <a href="#about">about</a>
           <p>.</p>
-          <a href="#">contact</a>
+          <a href="#quote">contact</a>
         </nav>
       </div>
     </header>
@@ -36,32 +39,32 @@
             <img src="assets/images/left-arrow.png" alt="left arrow">
           </div>
         </div>
-        <div class="slider-content showed-slide">
 
-          <div class="phone-wrapper">
-            <map name="iPhone-vertical">
-              <area id="iPhone-screen-one" class="phone-area" shape="circle" coords="108,430,23">
-            </map>
-            <div class="iPhone-screen-one"></div>
-            <img src="assets/images/iPhone_Vertical.png" alt="iPhone vertical" usemap="#iPhone-vertical">
-          </div>
-          <div class="phone-wrapper">
-            <map name="iPhone-horizontal">
-              <area id="iPhone-screen-two" class="phone-area" shape="circle" coords="30,105,23">
-            </map>
-            <div class="iPhone-screen-two"></div>
-            <img src="assets/images/iPhone_Horizontal.png" alt="iPhone horizontal" usemap="#iPhone-horizontal">
-          </div>
-        </div>
+        <section class="slider-content slide-1 showed-slide" id="home">
+            <div class="phones content-wrapper">
+              <div class="phone-wrapper">
+                <map name="iPhone-vertical">
+                  <area id="iPhone-screen-one" class="phone-area" shape="circle" coords="108,430,23">
+                </map>
+                <div class="iPhone-screen-one"></div>
+                <img src="assets/images/iPhone_Vertical.png" alt="iPhone vertical" usemap="#iPhone-vertical">
+              </div>
+              <div class="phone-wrapper">
+                <map name="iPhone-horizontal">
+                  <area id="iPhone-screen-two" class="phone-area" shape="circle" coords="30,105,23">
+                </map>
+                <div class="iPhone-screen-two"></div>
+                <img src="assets/images/iPhone_Horizontal.png" alt="iPhone horizontal" usemap="#iPhone-horizontal">
+              </div>
+            </div>
+        </section>
 
-        <div class="slider-content s2">
-          <div class="phone-wrapper">
+        <div class="slider-content slide-2">
             <map name="slider-2">
               <area id="iPhone-screen-three" class="phone-area" shape="circle" coords="500, 500, 23">
             </map>
             <div class="iPhone-screen-three"></div>
-            <img src="assets/images/Slide-2.png" alt="Slide 2" usemap="#slider-2">
-          </div>
+            <img src="assets/images/svg/iPhones-group.svg" alt="Slide 2" usemap="#slider-2">
         </div>
 
         <div class="slider-nav" id="next-arrow">
@@ -70,7 +73,7 @@
           </div>
         </div>
       </div>
-      <section class="services">
+      <section id="services" class="services">
         <div class="services-wrapper content-wrapper">
           <div class="services-description">
             <h2>Our Services</h2>
@@ -160,7 +163,7 @@
         </div>
       </section>
 
-      <section class="portfolio">
+      <section id="portfolio" class="portfolio">
         <div class="content-wrapper">
           <div class="portfolio-description">
             <h2 class="section-title">Portfolio</h2>
@@ -190,7 +193,7 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section id="about" class="about">
         <div class="content-wrapper">
           <div class="about-description">
             <h2 class="section-title">About Us</h2>
@@ -268,7 +271,7 @@
         </div>
       </section>
 
-      <section class="quote">
+      <section id="quote" class="quote">
         <div class="content-wrapper">
           <div class="quote-description">
             <h2 class="section-title">Get a Quote</h2>
@@ -295,7 +298,7 @@
                 consequat
                 felis.</p>
               <div>
-                <div class="contacts">
+                <div id="contact" class="contacts">
                   <div><a href="#"><img src="assets/images/svg/location-little-i.svg" alt="location icon"></a>
                     <p>Elm St. 14/05 Lost City</p>
                   </div>

@@ -1,8 +1,7 @@
 const $ = document;
 
-
 // Slider
-function Slider() {
+const slider = (function () {
     const slides = $.querySelectorAll(".slider-content");
     let currentSlide = 0;
 
@@ -23,29 +22,33 @@ function Slider() {
         }
         slides[currentSlide].classList.add("showed-slide");
     }
-}
+})();
 
 
 // Portfolio gallery
-function Portfolio() {
+const portfolio = (function () {
     const buttons = $.querySelectorAll(".sort-button");
     const images = $.querySelectorAll(".portfolio-pic");
 
     let currentButton = buttons[0];
     let currentPic;
 
-    buttons.forEach(button => {
-        button.onclick = (e) => {
+    $.querySelector(".portfolio-buttons").addEventListener("click", (e) => {
+        const target = e.target;
+   
+        if (target.classList.contains("sort-button")) {
             e.preventDefault();
 
             currentButton.classList.remove("current-choice");
-            button.classList.add("current-choice");
-            currentButton = button;
+            e.target.classList.add("current-choice");
+            currentButton = e.target;
             if (currentPic) currentPic.classList.remove("pic-with-border");
 
             sortGallery();
         }
-    });
+        else return;
+    })
+
 
     images.forEach(pic => {
         pic.onclick = () => {
@@ -56,12 +59,12 @@ function Portfolio() {
     const sortGallery = () => {
         images.forEach(pic => {
             const random = Math.floor(Math.random() * (1 - 12) + 1);
-            pic.style.order= `${random}`;
+            pic.style.order = `${random}`;
         });
     }
 
     const addBorder = (pic) => {
-        if (currentPic) currentPic.classList.remove("pic-with-border"); 
+        if (currentPic) currentPic.classList.remove("pic-with-border");
         if (currentPic == pic) {
             currentPic = undefined;
             return;
@@ -69,11 +72,12 @@ function Portfolio() {
         currentPic = pic;
         currentPic.classList.toggle("pic-with-border");
     }
-}
+})();
 
 // Phones toggle buttons
-function Toggler() {
+const toggler = (function () {
     const areas = $.querySelectorAll('.phone-area');
+
 
     areas.forEach(area => {
         area.onclick = (e) => {
@@ -82,9 +86,9 @@ function Toggler() {
             screen.classList.toggle("black-screen");
         };
     });
-}
+})();
 
-function Modal() {
+const modal = (function () {
     const form = $.querySelector("form");
     const modal = $.querySelector(".modal");
     let subject;
@@ -98,7 +102,7 @@ function Modal() {
     form.onsubmit = (e) => {
         e.preventDefault();
         subject = form.subject.value !== "" ? form.subject.value : "Без темы";
-        describe = form.describe.value !== ""? form.describe.value : "Без описания";
+        describe = form.describe.value !== "" ? form.describe.value : "Без описания";
         
         modal.style.display = "block";
         $.querySelector(".form-data > .data").innerHTML = `
@@ -113,20 +117,20 @@ function Modal() {
                 </div>
         `
     }
-}
+})();
 
-function Header() {
-    
-}
+const navigation = (function () {
+    const anchors = $.querySelectorAll(".navbar>a");
+    let current = anchors[0];
 
+    $.addEventListener("scroll", () => {
+        let centerX = document.documentElement.clientWidth / 2;
+        let centerY = document.documentElement.clientHeight / 2;
+        let currentSection = document.elementFromPoint(centerX, centerY).closest("section").id;
 
-
-// Init block
-window.onload = function () {
-    const slider = new Slider();
-    const gallery = new Portfolio();
-    const toggler = new Toggler();
-    const popup = new Modal();
-
-}
+        current.classList.remove("is-active-nav");
+        $.querySelector(`a[href$=${currentSection}]`).classList.add("is-active-nav");
+        current = $.querySelector(`a[href$=${currentSection}]`);
+    });
+})();
 
