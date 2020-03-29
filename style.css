@@ -66,6 +66,10 @@ header {
   display: none;
 }
 
+.open-burger {
+  transform: rotate(180deg);
+}
+
 /* Logo  styles*/
 .header-wrapper .logo {
   display: flex;
@@ -785,7 +789,7 @@ footer {
   }
 
   .slider {
-    height: 30vh;
+    height: 40vh;
   }
 
   .phones {
@@ -824,10 +828,19 @@ footer {
   .about-columns-wrapper {
     padding-top: 3em;
     width: 100%;
+    
 
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-column-gap: 1.2em;
+  }
+
+  .about-icons {
+    padding-top: 0.5em;
+  }
+
+  .about-column {
+    margin-bottom: 2em;
   }
 
   .contact-wrapper {
@@ -851,6 +864,14 @@ footer {
   .slide-2 img {
     display: block;
     width: 90vw;
+  }
+
+  .quote {
+    height: 130vh;
+  }
+
+  .contacts {
+    height: fit-content;
   }
 
   .footer-wrapper {

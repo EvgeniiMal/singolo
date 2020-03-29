@@ -126,12 +126,15 @@ const navigation = (function () {
         let centerX = document.documentElement.clientWidth / 2;
         let centerY = document.documentElement.clientHeight / 2;
         let currentSection = document.elementFromPoint(centerX, centerY).closest("section").classList[0];
-        console.log(currentSection)
+
         current.classList.remove("is-active-nav");
         $.querySelector(`a[href$=${currentSection}]`).classList.add("is-active-nav");
         current = $.querySelector(`a[href$=${currentSection}]`);
     });
 
-    const burger = $.querySelector()
+    const burger = $.querySelector('.burger');
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('open-burger')
+    });
 })();
 
