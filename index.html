@@ -8,8 +8,8 @@
   <title>Singolo</title>
 </head>
 
-<body>
-  <div id="home" class="test-wrapper">
+<body id="home">
+  <div class="test-wrapper">
     <header>
       <div class="header-wrapper content-wrapper">
         <div class="burger">
@@ -33,38 +33,29 @@
       </div>
     </header>
     <main>
-      <div class="slider">
+      <section class="home slider">
         <div class="slider-nav" id="prev-arrow">
           <div class="arrow-wrapper">
             <img src="assets/images/left-arrow.png" alt="left arrow">
           </div>
         </div>
 
-        <section class="slider-content slide-1 showed-slide" id="home">
+        <div class="slider-content slide-1 showed-slide" id="home">
             <div class="phones content-wrapper">
               <div class="phone-wrapper">
-                <map name="iPhone-vertical">
-                  <area id="iPhone-screen-one" class="phone-area" shape="circle" coords="108,430,23">
-                </map>
-                <div class="iPhone-screen-one"></div>
-                <img src="assets/images/iPhone_Vertical.png" alt="iPhone vertical" usemap="#iPhone-vertical">
+                <div class="iPhone-screen-one toggle-screen"></div>
+                <img src="assets/images/iPhone_Vertical.png" alt="iPhone vertical">
               </div>
               <div class="phone-wrapper">
-                <map name="iPhone-horizontal">
-                  <area id="iPhone-screen-two" class="phone-area" shape="circle" coords="30,105,23">
-                </map>
-                <div class="iPhone-screen-two"></div>
-                <img src="assets/images/iPhone_Horizontal.png" alt="iPhone horizontal" usemap="#iPhone-horizontal">
+                <div class="iPhone-screen-two toggle-screen"></div>
+                <img src="assets/images/iPhone_Horizontal.png" alt="iPhone horizontal">
               </div>
             </div>
-        </section>
+          </div>
 
         <div class="slider-content slide-2">
-            <map name="slider-2">
-              <area id="iPhone-screen-three" class="phone-area" shape="circle" coords="500, 500, 23">
-            </map>
-            <div class="iPhone-screen-three"></div>
-            <img src="assets/images/svg/iPhones-group.svg" alt="Slide 2" usemap="#slider-2">
+            <div class="iPhone-screen-three toggle-screen"></div>
+            <img src="assets/images/svg/iPhones-group.svg" alt="Slide 2">
         </div>
 
         <div class="slider-nav" id="next-arrow">
@@ -72,7 +63,7 @@
             <img src="assets/images/right-arrow.png" alt="right arrow">
           </div>
         </div>
-      </div>
+      </section>
       <section id="services" class="services">
         <div class="services-wrapper content-wrapper">
           <div class="services-description">

@@ -24,17 +24,12 @@
   box-sizing: border-box;
 }
 
-:root {
-  font-size: calc(lvw + 0.6em);
-}
-
 html {
   scroll-behavior: smooth;
-  
 }
 
 .content-wrapper {
-  width: 74.5%;
+  width: 60.5%;
   height: 100%;
   margin: 0 auto;
 }
@@ -101,8 +96,9 @@ header {
 }
 
 .navbar a:hover {
-  color: #f06c64;
+  color: #f06c64 !important;
 }
+
 
 .navbar a+p {
   color: #494e62;
@@ -119,6 +115,10 @@ header {
   position: relative;
   display: flex;
   justify-content: space-between;
+}
+
+.slider img {
+  user-select: none;
 }
 
 .slider-nav {
@@ -183,6 +183,7 @@ header {
 
 .slide-2 img {
   display: block;
+  height: 80%;
 }
 
 .showed-slide {
@@ -195,28 +196,20 @@ header {
 
 .iPhone-screen-one {
   position: absolute;
-  
-  bottom: 22.4%;
-  left: 16.4%;
-  height: 59.5%;
+
+  bottom: 18.2%;
+  left: 5.5%;
+  height: 68.5%;
+  width: 79%;
 }
 
 .iPhone-screen-two {
   position: absolute;
 
-  height: 59.5%;
-  bottom: 24.5%;
-  left: 17.3%;
-}
-
-.iPhone-screen-three {
-  position: absolute;
-  left: 39.8%;
-  bottom: 25.8%;
-
-  width: 18.3%;
-  height: 52.4%;
-  z-index: 100;
+  width: 69%;
+  height: 77%;
+  bottom: 17.5%;
+  left: 12.3%;
 }
 
 .black-screen {
@@ -230,7 +223,7 @@ map {
 
 /* Services style */
 .services {
-  min-height: 31.1em;
+  min-height: 50vh;
 
   position: relative;
 
@@ -246,7 +239,7 @@ map {
 
 /* Services description block styles */
 .services-description {
-  padding-top: 5.5%;
+  padding-top: 5.5vh;
 }
 
 .services-description h2 {
@@ -387,6 +380,10 @@ map {
   grid-row-gap: 1.15em;
 }
 
+.portfolio-images img {
+  width: 100%;
+}
+
 .portfolio-images .portfolio-pic:nth-child(1n+13) {
   display: none !important;
 }
@@ -398,7 +395,7 @@ map {
 
 /* About section */
 .about {
-  min-height: 45.8em;
+  min-height: 75vh;
 
   position: relative;
   z-index: 30;
@@ -440,7 +437,7 @@ map {
 
 .about-column .name {
   padding-top: 0.7em;
-  
+
 
   font-family: Lato-Black;
   font-weight: 500;
@@ -681,7 +678,7 @@ footer {
   border-radius: 0.6em;
 }
 
-.form-data h2{
+.form-data h2 {
   margin: auto;
 }
 
@@ -702,11 +699,11 @@ footer {
   text-align: justify;
 }
 
-.data p{
+.data p {
   padding: 0.5em 0.5em;
 }
 
-.form-data button{
+.form-data button {
   margin: 0.5em auto;
   width: 6em;
   height: 3em;
@@ -717,14 +714,11 @@ footer {
   cursor: pointer;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 1020px) {
-  .content-wrapper {
-    width:  96%;
-    margin: auto;
-  }
 
-  .navbar a:hover {
-    color: white;
+@media only screen and (min-width: 767px) and (max-width: 1200px) {
+  .content-wrapper {
+    width: 92%;
+    margin: auto;
   }
 
   .phones {
@@ -749,9 +743,11 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 3vh;
   }
+
   .portfolio-images img {
     width: 28vw;
   }
+
   .about-columns-wrapper {
     padding-top: 3em;
 
@@ -762,9 +758,9 @@ footer {
 
 }
 
-@media only screen and (min-width: 375px) and (max-width: 767px){
+@media only screen and (min-width: 375px) and (max-width: 767px) {
   .content-wrapper {
-    width: 96%;
+    width: 90%;
     margin: auto;
   }
 
@@ -786,6 +782,10 @@ footer {
 
   .navbar {
     display: none;
+  }
+
+  .slider {
+    height: 30vh;
   }
 
   .phones {
@@ -810,7 +810,7 @@ footer {
   }
 
   .portfolio-images img {
-    width: 45vw;
+    width: 98%;
   }
 
   .about-columns-wrapper {
@@ -835,7 +835,7 @@ footer {
   }
 
   .contact-form {
-    width: 96vw;
+    width: 98%;
     height: 27em;
   }
 
@@ -844,10 +844,24 @@ footer {
     width: 96vw;
   }
 
+  .contact-info-description {
+    width: 90%;
+  }
+
   .slide-2 img {
     display: block;
     width: 90vw;
   }
 
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-wrapper p {
+    display: none;
+  }
 
 }

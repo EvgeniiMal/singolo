@@ -76,13 +76,11 @@ const portfolio = (function () {
 
 // Phones toggle buttons
 const toggler = (function () {
-    const areas = $.querySelectorAll('.phone-area');
+    const screens = $.querySelectorAll('.toggle-screen');
 
 
-    areas.forEach(area => {
-        area.onclick = (e) => {
-            const screenClass = area.id;
-            const screen = $.querySelector(`.${screenClass}`);
+    screens.forEach(screen => {
+        screen.onclick = (e) => {
             screen.classList.toggle("black-screen");
         };
     });
@@ -120,17 +118,20 @@ const modal = (function () {
 })();
 
 const navigation = (function () {
-    const anchors = $.querySelectorAll(".navbar>a");
+    const anchors = $.querySelectorAll(".navbar > a");
+
     let current = anchors[0];
 
     $.addEventListener("scroll", () => {
         let centerX = document.documentElement.clientWidth / 2;
         let centerY = document.documentElement.clientHeight / 2;
-        let currentSection = document.elementFromPoint(centerX, centerY).closest("section").id;
-
+        let currentSection = document.elementFromPoint(centerX, centerY).closest("section").classList[0];
+        console.log(currentSection)
         current.classList.remove("is-active-nav");
         $.querySelector(`a[href$=${currentSection}]`).classList.add("is-active-nav");
         current = $.querySelector(`a[href$=${currentSection}]`);
     });
+
+    const burger = $.querySelector()
 })();
 
